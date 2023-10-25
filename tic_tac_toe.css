@@ -20,6 +20,7 @@
 
   /* rest */
   --SHADOW-COLOR-1: #000;
+  --SHADOW-COLOR-2: #fff
 }
 
 html {
@@ -121,6 +122,28 @@ article {
 .result-section {
   margin-top: 20px;
   font-size: 2rem;
+}
+
+.reset-button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 4px var(--SHADOW-COLOR-1);
+}
+
+.reset-button:hover {
+  box-shadow: 0 0 4px var(--SHADOW-COLOR-2);
+  color: #fff;
+  background-color: #000;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inherit;
 }
 
 /* footer */
