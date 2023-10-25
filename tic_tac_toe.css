@@ -83,6 +83,7 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .game-grid {
@@ -115,6 +116,11 @@ article {
   width: 100%;
   border: none;
   font-size: 4rem;
+}
+
+.result-section {
+  margin-top: 20px;
+  font-size: 2rem;
 }
 
 /* footer */
