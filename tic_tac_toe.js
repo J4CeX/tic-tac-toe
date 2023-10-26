@@ -4,55 +4,64 @@ let turn = 0;
 let grid = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let isEmpty = [true, true, true, true, true, true, true, true, true];
 
-document.getElementById("square-1").addEventListener("click", (event) => {
+const square1 = document.getElementById("square-1");
+square1.addEventListener("click", (event) => {
   if(game) {
     play("square-1", 1);
   }
 });
 
-document.getElementById("square-2").addEventListener("click", (event) => {
+const square2 = document.getElementById("square-2");
+square2.addEventListener("click", (event) => {
   if(game) {
     play("square-2", 2);
   }
 });
 
-document.getElementById("square-3").addEventListener("click", (event) => {
+const square3 = document.getElementById("square-3");
+square3.addEventListener("click", (event) => {
   if(game) {
     play("square-3", 3);
   }
 });
 
-document.getElementById("square-4").addEventListener("click", (event) => {
+const square4 = document.getElementById("square-4");
+square4.addEventListener("click", (event) => {
   if(game) {
     play("square-4", 4);
   }
 });
 
-document.getElementById("square-5").addEventListener("click", (event) => {
+const square5 = document.getElementById("square-5");
+square5.addEventListener("click", (event) => {
   if(game) {
     play("square-5", 5);
   }
 });
 
-document.getElementById("square-6").addEventListener("click", (event) => {
+const square6 = document.getElementById("square-6");
+square6.addEventListener("click", (event) => {
   if(game) {
     play("square-6", 6);
   }
 });
 
-document.getElementById("square-7").addEventListener("click", (event) => {
+const square7 = document.getElementById("square-7");
+square7.addEventListener("click", (event) => {
   if(game) {
     play("square-7", 7);
   }
 });
 
-document.getElementById("square-8").addEventListener("click", (event) => {
+const square8 = document.getElementById("square-8");
+square8.addEventListener("click", (event) => {
   if(game) {
     play("square-8", 8);
   }
 });
 
-document.getElementById("square-9").addEventListener("click", (event) => {
+const square9 = document.getElementById("square-9");
+square9.addEventListener("click", (event) => {
   if(game) {
     play("square-9", 9);
   }
@@ -76,8 +85,9 @@ const play = (square, number) => {
 
 };
 
+const getResult = document.getElementById('result');
+
 const result = (player) => {
-  const getResult = document.getElementById('result');
   if(grid[0]===grid[1] && grid[1]===grid[2]) {
     getResult.innerText = `${player} wins!`;
     reset.classList.remove("hide");
@@ -134,7 +144,16 @@ reset.addEventListener("click", (event) => {
   turn = 0;
   grid = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   isEmpty = [true, true, true, true, true, true, true, true, true];
-  //
+  getResult.innerText = "";
+  square1.innerText = "";
+  square2.innerText = "";
+  square3.innerText = "";
+  square4.innerText = "";
+  square5.innerText = "";
+  square6.innerText = "";
+  square7.innerText = "";
+  square8.innerText = "";
+  square9.innerText = "";
   reset.classList.remove("show");
   reset.classList.add("hide");
 });

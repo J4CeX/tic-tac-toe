@@ -122,6 +122,10 @@ article {
 .result-section {
   margin-top: 20px;
   font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .reset-button {
@@ -130,6 +134,7 @@ article {
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 4px var(--SHADOW-COLOR-1);
+  margin-top: 15px;
 }
 
 .reset-button:hover {
