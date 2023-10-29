@@ -86,54 +86,47 @@ const play = (square, number) => {
 };
 
 const getResult = document.getElementById('result');
+const resultSection = document.querySelector('.result-section');
 
 const result = (player) => {
   if(grid[0]===grid[1] && grid[1]===grid[2]) {
     getResult.innerText = `${player} wins!`;
-    reset.classList.remove("hide");
-    reset.classList.add("show");
+    resultSection.classList.toggle("hide");
     game = false;
   }
   if(grid[3]===grid[4] && grid[4]===grid[5]) {
     getResult.innerText = `${player} wins!`;
-    reset.classList.remove("hide");
-    reset.classList.add("show");
+    resultSection.classList.toggle("hide");
     game = false;
   }
   if(grid[6]===grid[7] && grid[7]===grid[8]) {
     getResult.innerText = `${player} wins!`;
-    reset.classList.remove("hide");
-    reset.classList.add("show");
+    resultSection.classList.toggle("hide");
     game = false;
   }
   if(grid[0]===grid[3] && grid[3]===grid[6]) {
     getResult.innerText = `${player} wins!`;
-    reset.classList.remove("hide");
-    reset.classList.add("show");
+    resultSection.classList.toggle("hide");
     game = false;
   }
   if(grid[1]===grid[4] && grid[4]===grid[7]) {
     getResult.innerText = `${player} wins!`;
-    reset.classList.remove("hide");
-    reset.classList.add("show");
+    resultSection.classList.toggle("hide");
     game = false;
   }
   if(grid[2]===grid[5] && grid[5]===grid[8]) {
     getResult.innerText = `${player} wins!`;
-    reset.classList.remove("hide");
-    reset.classList.add("show");
+    resultSection.classList.toggle("hide");
     game = false;
   }
   if(grid[0]===grid[4] && grid[4]===grid[8]) {
     getResult.innerText = `${player} wins!`;
-    reset.classList.remove("hide");
-    reset.classList.add("show");
+    resultSection.classList.toggle("hide");
     game = false;
   }
   if(grid[6]===grid[4] && grid[4]===grid[2]) {
     getResult.innerText = `${player} wins!`;
-    reset.classList.remove("hide");
-    reset.classList.add("show");
+    resultSection.classList.toggle("hide");
     game = false;
   }
 }
@@ -154,6 +147,5 @@ reset.addEventListener("click", (event) => {
   square7.innerText = "";
   square8.innerText = "";
   square9.innerText = "";
-  reset.classList.remove("show");
-  reset.classList.add("hide");
+  resultSection.classList.toggle("hide");
 });
