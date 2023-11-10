@@ -34,7 +34,6 @@ html {
 header {
   font-size: 1em;
   align-items: center;
-  flex-direction: column;
   color: var(--HEADER-COLOR);
   background-color: var(--HEADER-BGCOLOR);
   position: fixed;
@@ -74,16 +73,14 @@ main {
   align-items: center;
 }
 
-article {
-  margin-top: 100px;
-  width: 70%;
-}
-
 .tic_tac_toe {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 100px;
+  width: 70%;
+  margin-bottom: 100px;
 }
 
 .game-grid {
